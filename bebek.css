@@ -1,3 +1,16 @@
+/* ===================== BACKGROUND HALAMAN ===================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #e0f2fe, #fefce8);
+  min-height: 100vh;
+}
+
+main.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
 
 /* ===================== OVERLAY & NAVIGASI ===================== */
 body.nav-open::before {
@@ -101,8 +114,7 @@ body.nav-open::before {
   text-align: center;
   margin-bottom: 12px;
 }
-/* ===================== KONTEN UTAMA ===================== */
-.content {
+content {
     background-color: #fff7e5;
     width: 90%;
     max-width: 800px;
@@ -112,6 +124,7 @@ body.nav-open::before {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ===================== KONTEN UTAMA ===================== */
 .source {
     display: block;
     margin-top: 8px;
@@ -123,8 +136,29 @@ body.nav-open::before {
 /* ===================== STEP / SLIDE ===================== */
 .info-step {
     display: none;
+    background: #ffffff;
+  padding: 22px 18px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 28px;
+  animation: fadeUp 0.4s ease;
 }
-
+.info-step > img {
+  display: block;
+  margin: 16px auto;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .info-step.active {
     display: block;
 }
@@ -140,7 +174,21 @@ body.nav-open::before {
     margin-bottom: 16px;
     color: #1f2937;
 }
+.info-step h1,
+.info-step h3 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
 
+.info-step h1 {
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.info-step h3 {
+  font-size: 22px;
+}
 /* ===================== TOMBOL NAVIGASI ===================== */
 .nav-btn {
     display: flex;
@@ -188,6 +236,7 @@ body.nav-open::before {
   margin: 14px 0;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #e0f2fe;
 }
 
 .ciri-ciri img {
@@ -220,7 +269,7 @@ body.nav-open::before {
   flex-direction: column;   /* ATAS → BAWAH */
   align-items: center;
   text-align: center;
-  background: #fff;
+  background: #dcfce7;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 12px;
@@ -286,37 +335,6 @@ body.nav-open::before {
   margin-top: 14px;
   font-size: 18px;
   font-weight: bold;
-}
-
-/* ===================== TOMBOL KUIS ===================== */
-.info-step button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 12px;
-    border: none;
-    border-radius: 14px;
-    background-color: #ffffff;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.info-step button img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.feedback {
-    text-align: center;
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 /* ===================== TOMBOL KUIS ===================== */
